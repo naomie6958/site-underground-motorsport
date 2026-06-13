@@ -4,15 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO de base — à personnaliser par client -->
-  <title>NOM BUSINESS — Slogan court</title>
-  <meta name="description" content="Description du business en 1-2 phrases. Ville, province." />
+  <title>Underground Motorsport — Garage mécanique à Bécancour</title>
+  <meta name="description" content="Garage de mécanique automobile à Bécancour. Entretien, performance et expertise — 7 jours sur 7. On est pas au Walmart icitte !" />
 
-  <!-- Open Graph (partage Facebook/LinkedIn) -->
-  <meta property="og:title" content="NOM BUSINESS" />
-  <meta property="og:description" content="Description courte." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Underground Motorsport" />
+  <meta property="og:description" content="Garage de mécanique automobile à Bécancour. Entretien, performance et expertise — 7 jours sur 7." />
   <meta property="og:image" content="images/og-image.jpg" />
-  <meta property="og:url" content="https://DOMAINE.ca" />
+  <meta property="og:url" content="https://undergroundmotorsport.tntm.ca" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="images/favicon.ico" />
@@ -22,7 +25,9 @@
   <!-- ===== NAVIGATION ===== -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#" class="logo">NOM BUSINESS</a>
+      <a href="#" class="logo">
+        <img src="images/logo.jpg" alt="Underground Motorsport" />
+      </a>
       <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -31,7 +36,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#a-propos">À propos</a></li>
           <li><a href="#galerie">Galerie</a></li>
-          <li><a href="#contact" class="btn-nav">Contactez-nous</a></li>
+          <li><a href="#contact" class="btn-nav">Prendre rendez-vous</a></li>
         </ul>
       </nav>
     </div>
@@ -40,13 +45,14 @@
   <!-- ===== HERO ===== -->
   <section class="hero" id="accueil">
     <div class="container hero-content">
-      <h1>SLOGAN PRINCIPAL<br /><span>Sous-titre ou spécialité</span></h1>
-      <p class="hero-desc">Une ou deux phrases qui résument ce que le client fait et pour qui.</p>
+      <h1>ON EST PAS AU<br /><span>WALTMART</span> ICITTE <span>!</span></h1>
+      <p class="hero-desc">Garage de mécanique automobile à Bécancour. Entretien, performance et expertise — 7 jours sur 7.</p>
       <a href="#contact" class="btn-primary">Prendre rendez-vous</a>
     </div>
   </section>
 
   <!-- ===== SERVICES ===== -->
+  <!-- TODO : confirmer la liste exacte des services avec Luc -->
   <section class="services" id="services">
     <div class="container">
       <h2 class="section-title">Nos services</h2>
@@ -54,26 +60,26 @@
 
         <div class="service-card">
           <div class="service-icon">🔧</div>
-          <h3>Service 1</h3>
-          <p>Description courte du service. 1-2 phrases max.</p>
+          <h3>Entretien général</h3>
+          <p>Vidange d'huile, filtres, freins, courroies — tout ce qu'il faut pour rouler en confiance.</p>
         </div>
 
         <div class="service-card">
-          <div class="service-icon">⚙️</div>
-          <h3>Service 2</h3>
-          <p>Description courte du service. 1-2 phrases max.</p>
+          <div class="service-icon">⚡</div>
+          <h3>Performance & modifications</h3>
+          <p>Suspension, échappement, tuning — on pousse votre véhicule à son plein potentiel.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🔍</div>
+          <h3>Diagnostic & inspection</h3>
+          <p>Lecture de codes, inspection pré-achat, rapport complet et honnête.</p>
         </div>
 
         <div class="service-card">
           <div class="service-icon">🚗</div>
-          <h3>Service 3</h3>
-          <p>Description courte du service. 1-2 phrases max.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">✅</div>
-          <h3>Service 4</h3>
-          <p>Description courte du service. 1-2 phrases max.</p>
+          <h3>Pneus & alignement</h3>
+          <p>Montage, balancement et géométrie pour une conduite stable et sécuritaire.</p>
         </div>
 
       </div>
@@ -81,15 +87,16 @@
   </section>
 
   <!-- ===== À PROPOS ===== -->
+  <!-- TODO : faire valider ce texte par Luc -->
   <section class="a-propos" id="a-propos">
     <div class="container a-propos-inner">
       <div class="a-propos-text">
         <h2 class="section-title">À propos</h2>
-        <p>Paragraphe de présentation du propriétaire / de l'entreprise. Expérience, valeurs, ce qui les distingue.</p>
-        <p>Deuxième paragraphe optionnel.</p>
+        <p>Underground Motorsport, c'est un garage qui appelle les choses par leur nom. Pas de bullshit, pas de surprises sur la facture — juste du travail bien fait par quelqu'un qui aime les chars autant que toi.</p>
+        <p>Situé à Bécancour, on est ouverts 7 jours sur 7 parce qu'on sait que les problèmes mécaniques, eux, ne prennent pas de congé.</p>
       </div>
       <div class="a-propos-image">
-        <img src="images/a-propos.jpg" alt="Nom du propriétaire / équipe" loading="lazy" />
+        <img src="images/a-propos.jpg" alt="Luc Bilodeau — Underground Motorsport" loading="lazy" />
       </div>
     </div>
   </section>
@@ -99,12 +106,12 @@
     <div class="container">
       <h2 class="section-title">Galerie</h2>
       <div class="galerie-grid">
-        <img src="images/galerie-1.jpg" alt="Description image 1" loading="lazy" />
-        <img src="images/galerie-2.jpg" alt="Description image 2" loading="lazy" />
-        <img src="images/galerie-3.jpg" alt="Description image 3" loading="lazy" />
-        <img src="images/galerie-4.jpg" alt="Description image 4" loading="lazy" />
-        <img src="images/galerie-5.jpg" alt="Description image 5" loading="lazy" />
-        <img src="images/galerie-6.jpg" alt="Description image 6" loading="lazy" />
+        <img src="images/galerie-1.jpg" alt="Travaux Underground Motorsport" loading="lazy" />
+        <img src="images/galerie-2.jpg" alt="Travaux Underground Motorsport" loading="lazy" />
+        <img src="images/galerie-3.jpg" alt="Travaux Underground Motorsport" loading="lazy" />
+        <img src="images/galerie-4.jpg" alt="Travaux Underground Motorsport" loading="lazy" />
+        <img src="images/galerie-5.jpg" alt="Travaux Underground Motorsport" loading="lazy" />
+        <img src="images/galerie-6.jpg" alt="Travaux Underground Motorsport" loading="lazy" />
       </div>
     </div>
   </section>
@@ -116,16 +123,29 @@
       <div class="contact-info">
         <h2 class="section-title">Contactez-nous</h2>
         <ul class="contact-list">
-          <li>📞 <a href="tel:+15141234567">514 123-4567</a></li>
-          <li>📧 <a href="mailto:info@business.ca">info@business.ca</a></li>
-          <li>📍 123 Rue Exemple, Ville, QC</li>
-          <li>🕐 Lun–Ven : 8h–17h</li>
+          <li>📞 <a href="tel:+18193832118">819 383-2118</a></li>
+          <li>📧 <a href="mailto:undergroundgarage2.0@gmail.com">undergroundgarage2.0@gmail.com</a></li>
+          <li>📍 780 Rue Lucien Leboeuf, Porte 4<br />Bécancour, QC G9H 5B5</li>
+          <li>🕐 7 jours sur 7</li>
+          <li class="contact-socials">
+            <!-- TODO : remplacer # par les vrais liens Facebook/Instagram -->
+            <a href="#" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+            &nbsp;·&nbsp;
+            <a href="#" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+          </li>
         </ul>
-        <!-- Google Maps embed optionnel -->
-        <!-- <iframe src="LIEN_GOOGLE_MAPS_EMBED" ...></iframe> -->
+
+        <!-- TODO : remplacer src par le lien embed Google Maps -->
+        <!-- Aller sur maps.google.com → chercher l'adresse → Partager → Intégrer une carte → copier le src de l'iframe -->
+        <!-- <iframe
+          src="LIEN_GOOGLE_MAPS_EMBED"
+          width="100%" height="250" style="border:0; border-radius:4px; margin-top:1.5rem;"
+          allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe> -->
       </div>
 
-      <!-- Formulaire Formspree — remplacer FORMSPREE_ID -->
+      <!-- Formulaire Formspree — TODO : remplacer FORMSPREE_ID -->
       <form class="contact-form" action="https://formspree.io/f/FORMSPREE_ID" method="POST">
         <div class="form-group">
           <label for="nom">Nom</label>
@@ -137,7 +157,7 @@
         </div>
         <div class="form-group">
           <label for="telephone">Téléphone (optionnel)</label>
-          <input type="tel" id="telephone" name="telephone" placeholder="514 123-4567" />
+          <input type="tel" id="telephone" name="telephone" placeholder="819 383-2118" />
         </div>
         <div class="form-group">
           <label for="message">Message</label>
@@ -152,7 +172,7 @@
   <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> NOM BUSINESS. Tous droits réservés.</p>
+      <p>&copy; <span id="year"></span> Underground Motorsport. Tous droits réservés.</p>
       <p class="footer-credit">Site web par <a href="https://tntm.ca" target="_blank" rel="noopener">TNTMom</a></p>
     </div>
   </footer>

@@ -2,23 +2,23 @@
    VARIABLES — modifier ici pour chaque client
    ============================================= */
 :root {
-  /* Couleurs — à personnaliser */
-  --color-primary:    #FF6B00;   /* couleur principale (boutons, accents) */
-  --color-secondary:  #1A1A2E;   /* fond sombre / header */
-  --color-bg:         #F9F9F9;   /* fond général */
-  --color-text:       #222222;   /* texte principal */
-  --color-text-light: #666666;   /* texte secondaire */
+  --color-primary:    #CC0000;   /* rouge vif — accents, boutons */
+  --color-secondary:  #111111;   /* noir profond — header, hero */
+  --color-bg:         #2A2A2A;   /* gris graphite — fond général */
+  --color-surface:    #1E1E1E;   /* surface légèrement plus sombre */
+  --color-text:       #F0F0F0;   /* blanc cassé — texte principal */
+  --color-text-light: #A0A0A0;   /* gris clair — texte secondaire */
   --color-white:      #FFFFFF;
 
-  /* Typographie */
-  --font-heading: 'NOM_FONT_TITRE', sans-serif;  /* ex. 'Bebas Neue' */
-  --font-body:    'NOM_FONT_CORPS', sans-serif;  /* ex. 'DM Sans' */
+  --font-heading: 'Iceland', sans-serif;
+  --font-body:    'Barlow', sans-serif;
 
-  /* Dimensions */
+
   --max-width:  1200px;
-  --radius:     8px;
+  --radius:     4px;            /* coins peu arrondis = style industriel */
   --transition: 0.25s ease;
 }
+
 
 /* =============================================
    RESET & BASE
@@ -63,6 +63,8 @@ ul { list-style: none; }
   margin-bottom: 2.5rem;
 }
 
+
+
 /* =============================================
    BOUTONS
    ============================================= */
@@ -106,16 +108,19 @@ ul { list-style: none; }
 
 .header-inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .logo {
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
-  color: var(--color-white);
-  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 250px;
+  width: auto;
 }
 
 .main-nav ul {
@@ -159,9 +164,9 @@ ul { list-style: none; }
                     url('images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
-  min-height: 90vh;
+  min-height: 70vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   color: var(--color-white);
   padding: 4rem 0;
 }
