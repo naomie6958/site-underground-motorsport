@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO de base — à personnaliser par client -->
+  <title>NOM BUSINESS — Slogan court</title>
+  <meta name="description" content="Description du business en 1-2 phrases. Ville, province." />
+
+  <!-- Open Graph (partage Facebook/LinkedIn) -->
+  <meta property="og:title" content="NOM BUSINESS" />
+  <meta property="og:description" content="Description courte." />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <meta property="og:url" content="https://DOMAINE.ca" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/favicon.ico" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">NOM BUSINESS</a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#a-propos">À propos</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#contact" class="btn-nav">Contactez-nous</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="accueil">
+    <div class="container hero-content">
+      <h1>SLOGAN PRINCIPAL<br /><span>Sous-titre ou spécialité</span></h1>
+      <p class="hero-desc">Une ou deux phrases qui résument ce que le client fait et pour qui.</p>
+      <a href="#contact" class="btn-primary">Prendre rendez-vous</a>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="section-title">Nos services</h2>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3>Service 1</h3>
+          <p>Description courte du service. 1-2 phrases max.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⚙️</div>
+          <h3>Service 2</h3>
+          <p>Description courte du service. 1-2 phrases max.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🚗</div>
+          <h3>Service 3</h3>
+          <p>Description courte du service. 1-2 phrases max.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">✅</div>
+          <h3>Service 4</h3>
+          <p>Description courte du service. 1-2 phrases max.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== À PROPOS ===== -->
+  <section class="a-propos" id="a-propos">
+    <div class="container a-propos-inner">
+      <div class="a-propos-text">
+        <h2 class="section-title">À propos</h2>
+        <p>Paragraphe de présentation du propriétaire / de l'entreprise. Expérience, valeurs, ce qui les distingue.</p>
+        <p>Deuxième paragraphe optionnel.</p>
+      </div>
+      <div class="a-propos-image">
+        <img src="images/a-propos.jpg" alt="Nom du propriétaire / équipe" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERIE ===== -->
+  <section class="galerie" id="galerie">
+    <div class="container">
+      <h2 class="section-title">Galerie</h2>
+      <div class="galerie-grid">
+        <img src="images/galerie-1.jpg" alt="Description image 1" loading="lazy" />
+        <img src="images/galerie-2.jpg" alt="Description image 2" loading="lazy" />
+        <img src="images/galerie-3.jpg" alt="Description image 3" loading="lazy" />
+        <img src="images/galerie-4.jpg" alt="Description image 4" loading="lazy" />
+        <img src="images/galerie-5.jpg" alt="Description image 5" loading="lazy" />
+        <img src="images/galerie-6.jpg" alt="Description image 6" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="container contact-inner">
+
+      <div class="contact-info">
+        <h2 class="section-title">Contactez-nous</h2>
+        <ul class="contact-list">
+          <li>📞 <a href="tel:+15141234567">514 123-4567</a></li>
+          <li>📧 <a href="mailto:info@business.ca">info@business.ca</a></li>
+          <li>📍 123 Rue Exemple, Ville, QC</li>
+          <li>🕐 Lun–Ven : 8h–17h</li>
+        </ul>
+        <!-- Google Maps embed optionnel -->
+        <!-- <iframe src="LIEN_GOOGLE_MAPS_EMBED" ...></iframe> -->
+      </div>
+
+      <!-- Formulaire Formspree — remplacer FORMSPREE_ID -->
+      <form class="contact-form" action="https://formspree.io/f/FORMSPREE_ID" method="POST">
+        <div class="form-group">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" required placeholder="Votre nom" />
+        </div>
+        <div class="form-group">
+          <label for="courriel">Courriel</label>
+          <input type="email" id="courriel" name="courriel" required placeholder="votre@courriel.com" />
+        </div>
+        <div class="form-group">
+          <label for="telephone">Téléphone (optionnel)</label>
+          <input type="tel" id="telephone" name="telephone" placeholder="514 123-4567" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Décrivez votre besoin..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Envoyer</button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> NOM BUSINESS. Tous droits réservés.</p>
+      <p class="footer-credit">Site web par <a href="https://tntm.ca" target="_blank" rel="noopener">TNTMom</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
