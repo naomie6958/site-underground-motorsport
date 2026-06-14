@@ -18,7 +18,7 @@
   --radius:     4px;                /* coins peu arrondis = style industriel */
   --transition: 0.25s ease;
 
-  --banniere: none;                /* flex = visible | none = cachée */
+  --banniere: flex;                /* flex = visible | none = cachée */
 }
 
 
