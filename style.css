@@ -3,7 +3,7 @@
    ============================================= */
 :root {
   --color-primary:    #CC0000;   /* rouge vif — accents, boutons */
-  --color-secondary:  #111111;   /* noir profond — header, hero */
+  --color-secondary:  #000000;   /* noir profond — header, hero */
   --color-bg:         #2A2A2A;   /* gris graphite — fond général */
   --color-surface:    #1E1E1E;   /* surface légèrement plus sombre */
   --color-text:       #F0F0F0;   /* blanc cassé — texte principal */
@@ -15,8 +15,10 @@
 
 
   --max-width:  1200px;
-  --radius:     4px;            /* coins peu arrondis = style industriel */
+  --radius:     4px;                /* coins peu arrondis = style industriel */
   --transition: 0.25s ease;
+
+  --banniere: none;                /* flex = visible | none = cachée */
 }
 
 
@@ -94,6 +96,46 @@ ul { list-style: none; }
 
 .btn-nav:hover { opacity: 0.85; }
 
+/* Fade in simple : invisible → visible */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Slide up + fade : monte de 30px en apparaissant */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* part d'en bas */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);   /* arrive à sa position normale */
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* =============================================
    HEADER / NAVIGATION
    ============================================= */
@@ -104,11 +146,14 @@ ul { list-style: none; }
   background: var(--color-secondary);
   padding: 1rem 0;
   box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+
+  opacity: 0;
+  animation: slideDown 0.4s ease-out 0s forwards;
 }
 
 .header-inner {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 2rem;
 }
@@ -119,7 +164,7 @@ ul { list-style: none; }
 }
 
 .logo img {
-  height: 250px;
+  height: 170px;
   width: auto;
 }
 
@@ -164,11 +209,11 @@ ul { list-style: none; }
                     url('images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
-  min-height: 70vh;
+  min-height: 15vh;
   display: flex;
   align-items: flex-start;
   color: var(--color-white);
-  padding: 4rem 0;
+  padding: 1rem 0;
 }
 
 .hero-content {
@@ -180,6 +225,9 @@ ul { list-style: none; }
   font-size: clamp(2.5rem, 7vw, 5rem);
   line-height: 1.1;
   margin-bottom: 1.2rem;
+
+  opacity: 0;
+  animation: slideLeft 0.4s ease-out 0.4s forwards;
 }
 
 .hero h1 span {
@@ -188,9 +236,16 @@ ul { list-style: none; }
 
 .hero-desc {
   font-size: 1.15rem;
-  opacity: 0.9;
   margin-bottom: 2rem;
   max-width: 540px;
+
+  opacity: 0;
+  animation: fadeIn 0.4s ease-out 0.8s forwards;
+}
+
+.hero .btn-primary {
+  opacity: 0;
+  animation: slideUp 0.4s ease-out 1.2s forwards;
 }
 
 /* =============================================
@@ -388,6 +443,7 @@ ul { list-style: none; }
    BANNIÈRE PRODUCTION — retirer au lancement
    ============================================= */
 .banniere-production {
+  display: var(--banniere);
   position: fixed;
   bottom: 0;
   left: 0;
