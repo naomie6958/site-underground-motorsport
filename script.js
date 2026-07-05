@@ -42,3 +42,19 @@ if (form) {
     }
   });
 }
+
+// Scroll reveal
+const sectionsToReveal = document.querySelectorAll('.services, .a-propos, .galerie, .contact');
+
+const scrollObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      scrollObserver.unobserve(entry.target);
+    };
+  });
+});
+
+sectionsToReveal.forEach(function(section) {
+  scrollObserver.observe(section);
+});
