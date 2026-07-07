@@ -54,7 +54,12 @@ if (heroLogoBg) {
   const updateHeroLogo = () => {
     const raw = Math.min(window.scrollY / maxScroll, 1);
     const progress = raw * raw * (3 - 2 * raw); // easing smoothstep — apparition plus douce
-    heroLogoBg.style.opacity = 0.03 + progress * 0.64;
+    heroLogoBg.style.opacity = 0.09 + progress * 0.6;
+    // Effet de profondeur : le logo grossit légèrement et projette une ombre plus
+    // marquée en scrollant, comme s'il se rapprochait du visiteur.
+    const scale = 1 + progress * 0.12;
+    heroLogoBg.style.transform = `translate(-50%, -50%) scale(${scale})`;
+    heroLogoBg.style.filter = `drop-shadow(0 ${10 + progress * 20}px ${20 + progress * 30}px rgba(0,0,0,${0.3 + progress * 0.4}))`;
     headlights.forEach(h => { h.style.opacity = progress; });
     heroLogoBg.classList.toggle('leds-on', progress > 0.5);
   };

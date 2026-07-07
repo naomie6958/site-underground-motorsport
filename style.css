@@ -243,10 +243,19 @@ ul { list-style: none; }
   background-position: center;
   background-repeat: no-repeat;
   mix-blend-mode: screen;
-  opacity: 0.03;
-  transition: opacity 0.5s ease-out;
+  opacity: 0.09;
+  transition: opacity 0.5s ease-out, filter 0.5s ease-out;
   pointer-events: none;
   z-index: 0;
+}
+
+/* Mobile : logo plus gros, quitte à déborder des côtés, décalé vers le bas
+   pour que le char du logo ressorte sous le bouton CTA. */
+@media (max-width: 768px) {
+  .hero-logo-bg {
+    width: 145vw;
+    top: 62%;
+  }
 }
 
 /* Phares avant du char dans le logo — s'allument avec le reste au scroll
@@ -362,7 +371,7 @@ section[id] {
 
 .services .container {
   width: 95%;
-  max-width: 1080px;
+  max-width: 1225px;
   position: relative;
   z-index: 1;
   background: rgba(0,0,0,0.55);
@@ -408,7 +417,7 @@ section[id] {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 240px));
   justify-content: center;
-  gap: 1.5rem 3rem;
+  gap: 2.5rem 4.5rem;
 }
 
 .service-card {
@@ -497,7 +506,7 @@ section[id] {
 
 .galerie .container {
   width: 95%;
-  max-width: 1080px;
+  max-width: 1225px;
   position: relative;
   z-index: 1;
   background: rgba(0,0,0,0.55);
