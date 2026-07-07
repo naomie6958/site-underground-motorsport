@@ -33,7 +33,7 @@ if (form) {
       });
 
       if (res.ok) {
-        form.innerHTML = '<p style="color: #4CAF50; font-size: 1.1rem; text-align: center;">✅ Message envoyé ! On vous répond rapidement.</p>';
+        form.innerHTML = '<p style="color: #4CAF50; font-size: 1.1rem; text-align: center;">✅ Demande envoyée ! On vous recontacte sous 6 à 12h.</p>';
       } else {
         alert('Erreur lors de l\'envoi. Veuillez réessayer.');
       }
@@ -41,6 +41,25 @@ if (form) {
       alert('Erreur réseau. Veuillez réessayer.');
     }
   });
+}
+
+// Logo géant du hero : plus visible (et plus rouge) au fil du scroll
+// (pas de garde prefers-reduced-motion ici : l'effet suit directement le scroll
+// de l'utilisateur, ce n'est pas une animation automatique)
+const heroLogoBg = document.querySelector('.hero-logo-bg');
+
+if (heroLogoBg) {
+  const maxScroll = 450; // px de scroll pour atteindre l'intensité max
+  const headlights = heroLogoBg.querySelectorAll('.headlight');
+  const updateHeroLogo = () => {
+    const raw = Math.min(window.scrollY / maxScroll, 1);
+    const progress = raw * raw * (3 - 2 * raw); // easing smoothstep — apparition plus douce
+    heroLogoBg.style.opacity = 0.03 + progress * 0.64;
+    headlights.forEach(h => { h.style.opacity = progress; });
+    heroLogoBg.classList.toggle('leds-on', progress > 0.5);
+  };
+  window.addEventListener('scroll', updateHeroLogo, { passive: true });
+  updateHeroLogo();
 }
 
 // Scroll reveal
