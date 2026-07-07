@@ -843,3 +843,14 @@ fieldset.form-group {
   }
   html { scroll-behavior: auto; }
 }
+
+/* Exception : les animations d'entrée du header/hero sont ponctuelles (une seule fois,
+   0.4s, pas de boucle) — pas le genre d'animation que prefers-reduced-motion vise à
+   bloquer, donc on les rejoue normalement même quand les animations sont désactivées
+   dans Windows. */
+.site-header,
+.hero h1,
+.hero-desc,
+.hero .btn-primary {
+  animation-duration: 0.4s !important;
+}
