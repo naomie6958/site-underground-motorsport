@@ -235,6 +235,20 @@
 
   <script src="script.js"></script>
 
-  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "61dcf932fa5e4be59825d5ab50457d07"}'></script><!-- End Cloudflare Web Analytics -->
+  <!-- Cloudflare Web Analytics — chargé seulement si pas exclu (voir ?noanalytics) -->
+  <script>
+  (function () {
+      if (new URLSearchParams(window.location.search).has('noanalytics')) {
+          localStorage.setItem('tntm_exclude_analytics', 'true');
+      }
+      if (localStorage.getItem('tntm_exclude_analytics') === 'true') return;
+      var beacon = document.createElement('script');
+      beacon.defer = true;
+      beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+      beacon.setAttribute('data-cf-beacon', '{"token": "61dcf932fa5e4be59825d5ab50457d07"}');
+      document.body.appendChild(beacon);
+  })();
+  </script>
+  <!-- End Cloudflare Web Analytics -->
 </body>
 </html>
