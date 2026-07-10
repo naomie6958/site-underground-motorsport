@@ -214,8 +214,7 @@ ul { list-style: none; }
 /* =============================================
    HERO
    ============================================= */
-/* Gradient temporaire en attendant une vraie photo de Luc — remplacer par
-   background-image: url('images/hero-bg.jpg') une fois le fichier fourni */
+/* Gradient temporaire — remplacer par une photo de Luc quand fournie */
 .hero {
   background: radial-gradient(ellipse at 30% 30%, rgba(204,0,0,0.18), transparent 60%),
               linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
