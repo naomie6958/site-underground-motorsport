@@ -21,6 +21,10 @@ nav.querySelectorAll('a').forEach(link => {
 // Message de confirmation après envoi du formulaire Formspree
 const form = document.querySelector('.contact-form');
 if (form) {
+  // Anti-bot : timestamp du chargement, sert au piège de timing côté serveur
+  const tsField = form.querySelector('[name="_ts"]');
+  if (tsField) tsField.value = Date.now() / 1000;
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const data = new FormData(form);
